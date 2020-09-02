@@ -1,41 +1,56 @@
 <!-- Please do not change this logo with link -->
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for avr128db48-getting-started-with-opamp-studio-start here
+#  Getting Started with Analog Signal Conditioning (OPAMP)
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+The Analog Signal Conditioning (OPAMP) peripheral features up to three internal operational amplifiers (op amps). The op amps can be configured to a multitude of different operations using internal multiplexers and resistor laders  
+
+The main purpose of op amps is to condition the analog signals before acquisition in a microcontroller or to provide the necessary output drive in control applications
+
+These examples show the following configurations of the OPAMP peripheral on the AVR DB family of microcontrollers:
+
+* **Voltage Follower:** 
+OP0 is configured as an voltage follower
+* **Non-Inverting PGA:** 
+OP0 is configured as a non-inverting PGA
+* **Differential Amplifier:** 
+OP0 and OP1 are combined to create a differential amplifier 
+* **Instrumentation Amplifier:** 
+OP0, OP1 and OP2 are combined to create an instrumentation amplifier
+
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+* [TB3286 - Getting Started with Analog Signal Conditioning (OPAMP)](https://microchip.com/DS90003286)
+* [AVR128DB48 Device Page](https://www.microchip.com/wwwproducts/en/AVR128DB48)
+* [AVR128DB48 Curiosity Nano User Guide](https://www.microchip.com/DS50003037)
+
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
+* [Atmel Studio](https://www.microchip.com/mplab/avr-support/atmel-studio-7) 7.0.2397 or later
+* [Atmel Start](https://start.atmel.com/) v1.1.14 or later
+* Atmel Studio AVR-Dx_DFP version 1.3.67 or later
+* For the MPLAB® Code Configurator version of these projects, please go to [this repository](https://github.com/microchip-pic-avr-examples/avr128db48-getting-started-with-opamp-mplab-mcc)
 
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+* [AVR128DB48 Curiosity Nano](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV35L43A)
 
 ## Setup
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+All examples can be completed using the AVR128DB48 Curiosity Nano without any extra components
 
 ## Operation
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+* Connect the AVR128DB48 Curiosity Nano to a computer using a USB cable
+* Clone the repository or download the zip to get the source code
+* Open the .atsln file with Atmel Studio
+* In Solution Explorer, right-click the project you want to run and select *Set as StartUp Project*
+* Press *Start Without Debugging* (CTRL+ALT+F5) to run the example
+* To reconfigure the project press *Reconfigure Atmel Start Project*
+
 
 ## Summary
 
-<!-- Summarize what the example has shown -->
+After going through these examples you should have a better understanding of how to configure the the OPAMP peripheral to achieve different modes of operation.   
