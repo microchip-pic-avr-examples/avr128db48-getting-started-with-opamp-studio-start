@@ -3,6 +3,7 @@
 /**/*.atsuo
 /**/[Dd]ebug/*
 /**/[Rr]elease/*
+/**/.atmel-start-backup/*
 
 # Uncomment these to include hex/elf files
 #!/**/[Dd]ebug/*.hex
