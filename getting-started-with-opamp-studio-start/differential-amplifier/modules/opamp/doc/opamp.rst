@@ -71,7 +71,6 @@ Supported Applications
 
 **Note :** The 28-pin and 32-pin variant devices doesn't support Triple OPAMP Applications
 
-
 Dependencies
 ------------
 * CLKCTRL/CLK for clocks

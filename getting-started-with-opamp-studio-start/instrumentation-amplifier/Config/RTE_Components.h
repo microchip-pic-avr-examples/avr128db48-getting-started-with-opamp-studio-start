@@ -39,7 +39,7 @@
  *
  * \acme_license_stop
  *
- * Project: Instrumentation_Amplifier
+ * Project: instrumentation-amplifier
  * Target:  AVR128DB48 
  *
  **/

@@ -2,16 +2,16 @@ format_version: '2'
 name: My Project
 versions:
   api: '1.0'
-  backend: 1.7.407
-  commit: d4b7e9f65a05ebffcb0986e4060cb8c0a313e69a
+  backend: 1.8.457
+  commit: c39d50a8c7c22fe58c921178843d3cbb666dc04b
   content: unknown
   content_pack_name: unknown
   format: '2'
-  frontend: 1.7.407
-  packs_version_avr8: 1.0.1401
+  frontend: 1.8.457
+  packs_version_avr8: 1.0.1441
   packs_version_qtouch: unknown
-  packs_version_sam: 1.0.1373
-  version_backend: 1.7.407
+  packs_version_sam: 1.0.1726
+  version_backend: 1.8.457
   version_frontend: ''
 board:
   identifier: CustomBoard
@@ -22,7 +22,7 @@ middlewares: {}
 drivers:
   OPERATIONAL_AMPLIFIER_0:
     user_label: OPERATIONAL_AMPLIFIER_0
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::OPAMP::driver_config_definition::4-Single~3A.OP2.Dual~3A.OP0-OP1::Drivers:OPAMP:Basic
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::OPAMP::driver_config_definition::4-Single~3A.OP2.Dual~3A.OP0-OP1::Drivers:OPAMP:Basic
     functionality: Operational_Amplifier
     api: Drivers:OPAMP:Basic
     configuration:
@@ -69,35 +69,35 @@ drivers:
       pad: PD3
       mode: Enabled
       configuration: null
-      definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP0INN
+      definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP0INN
       name: OPAMP/OP0INN
       label: OP0INN
     - identifier: OPERATIONAL_AMPLIFIER_0:OP0INP
       pad: PD1
       mode: Enabled
       configuration: null
-      definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP0INP
+      definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP0INP
       name: OPAMP/OP0INP
       label: OP0INP
     - identifier: OPERATIONAL_AMPLIFIER_0:OP1INN
       pad: PD7
       mode: Enabled
       configuration: null
-      definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP1INN
+      definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP1INN
       name: OPAMP/OP1INN
       label: OP1INN
     - identifier: OPERATIONAL_AMPLIFIER_0:OP1INP
       pad: PD4
       mode: Enabled
       configuration: null
-      definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP1INP
+      definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP1INP
       name: OPAMP/OP1INP
       label: OP1INP
     - identifier: OPERATIONAL_AMPLIFIER_0:OP1OUT
       pad: PD5
       mode: Enabled
       configuration: null
-      definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP1OUT
+      definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::optional_signal_definition::OPAMP.OP1OUT
       name: OPAMP/OP1OUT
       label: OP1OUT
     variant: null
@@ -112,10 +112,20 @@ drivers:
           opamp_clock_source: Main Clock (CLK_MAIN)
   CLKCTRL:
     user_label: CLKCTRL
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::CLKCTRL::driver_config_definition::CLKCTRL::Drivers:CLKCTRL:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::CLKCTRL::driver_config_definition::CLKCTRL::Drivers:CLKCTRL:Init
     functionality: System
     api: Drivers:CLKCTRL:Init
     configuration:
+      $input: 24000000
+      $input_id: Internal high-frequency oscillator
+      RESERVED_InputFreq: 24000000
+      RESERVED_InputFreq_id: Internal high-frequency oscillator
+      _$freq_output_32kHz divided by 32: 1024
+      _$freq_output_External clock: 8000000
+      _$freq_output_Internal high-frequency oscillator: 24000000
+      _$freq_output_Main Clock (CLK_MAIN): 24000000
+      _$freq_output_PLL: 24000000
+      _$freq_output_TCD0 Clock (CLK_TCD0): 24000000
       clkctrl_mclkctrla_cksel: Internal high-frequency oscillator
       clkctrl_mclkctrla_clkout: false
       clkctrl_mclkctrlb_pdiv: '2'
@@ -171,7 +181,7 @@ drivers:
         configuration: {}
   USART_0:
     user_label: USART_0
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::USART3::driver_config_definition::Async.IRQ.Mode::Drivers:USART:Basic
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::USART3::driver_config_definition::Async.IRQ.Mode::Drivers:USART:Basic
     functionality: USART
     api: Drivers:USART:Basic
     configuration:
@@ -179,7 +189,6 @@ drivers:
       ctrla_abeie: false
       ctrla_dreie: false
       ctrla_lbme: false
-      ctrla_rs485: RS485 Mode disabled
       ctrla_rxcie: true
       ctrla_rxsie: false
       ctrla_txcie: false
@@ -203,6 +212,7 @@ drivers:
       printf_support: false
       rxplctrl_rxpl: 0
       txplctrl_txpl: 0
+      usart_ctrla_rs485: RS485 Mode disabled
     optional_signals: []
     variant:
       specification: CMODE=0
@@ -224,7 +234,7 @@ drivers:
           usart_clock_source: Main Clock (CLK_MAIN)
   SLPCTRL:
     user_label: SLPCTRL
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::SLPCTRL::driver_config_definition::SLPCTRL::Drivers:SLPCTRL:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::SLPCTRL::driver_config_definition::SLPCTRL::Drivers:SLPCTRL:Init
     functionality: System
     api: Drivers:SLPCTRL:Init
     configuration:
@@ -236,7 +246,7 @@ drivers:
       domain_group: null
   CPUINT:
     user_label: CPUINT
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::CPUINT::driver_config_definition::CPUINT::Drivers:CPUINT:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::CPUINT::driver_config_definition::CPUINT::Drivers:CPUINT:Init
     functionality: System
     api: Drivers:CPUINT:Init
     configuration:
@@ -254,7 +264,7 @@ drivers:
       domain_group: null
   DAC_0:
     user_label: DAC_0
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::DAC0::driver_config_definition::DAC.Basic::Drivers:DAC:Basic
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::DAC0::driver_config_definition::DAC.Basic::Drivers:DAC:Basic
     functionality: DAC
     api: Drivers:DAC:Basic
     configuration:
@@ -267,7 +277,7 @@ drivers:
       pad: PD6
       mode: Enabled
       configuration: null
-      definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::optional_signal_definition::DAC0.OUT.0
+      definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::optional_signal_definition::DAC0.OUT.0
       name: DAC0/OUT/0
       label: OUT/0
     variant: null
@@ -282,7 +292,7 @@ drivers:
           dac_clock_source: Main Clock (CLK_MAIN)
   ADC_0:
     user_label: ADC_0
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::ADC0::driver_config_definition::ADC.Basic::Drivers:ADC:Basic
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::ADC0::driver_config_definition::ADC.Basic::Drivers:ADC:Basic
     functionality: ADC
     api: Drivers:ADC:Basic
     configuration:
@@ -313,7 +323,7 @@ drivers:
       pad: PD2
       mode: Enabled
       configuration: null
-      definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::optional_signal_definition::ADC0.AIN.2
+      definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::optional_signal_definition::ADC0.AIN.2
       name: ADC0/AIN/2
       label: AIN/2
     variant: null
@@ -328,10 +338,15 @@ drivers:
           adc_clock_source: Main Clock (CLK_MAIN)
   RTC_0:
     user_label: RTC_0
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::RTC::driver_config_definition::RTC::Drivers:RTC:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::RTC::driver_config_definition::RTC::Drivers:RTC:Init
     functionality: RTC
     api: Drivers:RTC:Init
     configuration:
+      $input: 0
+      $input_id: Internal 32.768 kHz oscillator
+      RESERVED_InputFreq: 0
+      RESERVED_InputFreq_id: Internal 32.768 kHz oscillator
+      _$freq_output_RTC Clock (CLK_RTC): 1024
       enable_rtc: true
       inc_isr_harness: false
       rtc_clksel_clksel: Internal 32.768 kHz oscillator
@@ -361,7 +376,7 @@ drivers:
           rtc_clock_source: RTC Clock (CLK_RTC)
   SINE_WAVE_TIMER:
     user_label: SINE_WAVE_TIMER
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::TCB0::driver_config_definition::Init::Drivers:TCB:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::TCB0::driver_config_definition::Init::Drivers:TCB:Init
     functionality: Timer
     api: Drivers:TCB:Init
     configuration:
@@ -369,7 +384,7 @@ drivers:
       tcb_ccmp: 10434
       tcb_cnt: 0
       tcb_ctrla_cascade: false
-      tcb_ctrla_clksel: CLK_PEP
+      tcb_ctrla_clksel: CLK_PER
       tcb_ctrla_enable: false
       tcb_ctrla_runstdby: false
       tcb_ctrla_syncupd: false
@@ -396,7 +411,7 @@ drivers:
           tcb_clock_source: Main Clock (CLK_MAIN)
   ADC_SAMPLE_TIMER:
     user_label: ADC_SAMPLE_TIMER
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::TCB1::driver_config_definition::Init::Drivers:TCB:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::TCB1::driver_config_definition::Init::Drivers:TCB:Init
     functionality: Timer
     api: Drivers:TCB:Init
     configuration:
@@ -404,7 +419,7 @@ drivers:
       tcb_ccmp: 30000
       tcb_cnt: 0
       tcb_ctrla_cascade: false
-      tcb_ctrla_clksel: CLK_PEP
+      tcb_ctrla_clksel: CLK_PER
       tcb_ctrla_enable: false
       tcb_ctrla_runstdby: false
       tcb_ctrla_syncupd: false
@@ -431,7 +446,7 @@ drivers:
           tcb_clock_source: Main Clock (CLK_MAIN)
   VREF_0:
     user_label: VREF_0
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::VREF::driver_config_definition::VREF::Drivers:VREF:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::VREF::driver_config_definition::VREF::Drivers:VREF:Init
     functionality: VREF
     api: Drivers:VREF:Init
     configuration:
@@ -447,7 +462,7 @@ drivers:
       domain_group: null
   BOD:
     user_label: BOD
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::BOD::driver_config_definition::BOD::Drivers:BOD:Init
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::BOD::driver_config_definition::BOD::Drivers:BOD:Init
     functionality: System
     api: Drivers:BOD:Init
     configuration:
@@ -463,67 +478,67 @@ drivers:
 pads:
   PB0:
     name: PB0
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PB0
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PB0
     mode: Digital output
     user_label: PB0
     configuration: null
   PB1:
     name: PB1
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PB1
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PB1
     mode: Digital input
     user_label: PB1
     configuration: null
   LED0:
     name: PB3
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PB3
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PB3
     mode: Digital output
     user_label: LED0
     configuration: null
   PD1:
     name: PD1
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PD1
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PD1
     mode: Analog
     user_label: PD1
     configuration: null
   PD2:
     name: PD2
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PD2
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PD2
     mode: Analog
     user_label: PD2
     configuration: null
   PD3:
     name: PD3
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PD3
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PD3
     mode: Analog
     user_label: PD3
     configuration: null
   PD4:
     name: PD4
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PD4
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PD4
     mode: Analog
     user_label: PD4
     configuration: null
   PD5:
     name: PD5
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PD5
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PD5
     mode: Analog
     user_label: PD5
     configuration: null
   PD6:
     name: PD6
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PD6
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PD6
     mode: Analog
     user_label: PD6
     configuration: null
   PD7:
     name: PD7
-    definition: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::pad::PD7
+    definition: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::pad::PD7
     mode: Analog
     user_label: PD7
     configuration: null
 toolchain_options:
 - definition:
-    identifier: Microchip:AVRDB_48_64_drivers:1.0.0::AVR128DB48::environment_definition::All:Atmel.Studio:7.0.0
+    identifier: Microchip:AVRDB_48_drivers:1.0.0::AVR128DB48::environment_definition::All:Atmel.Studio:7.0.0
   configuration:
     compiler_config:
       avrgcc_compiler_miscellaneous_OtherFlags: -std=gnu99

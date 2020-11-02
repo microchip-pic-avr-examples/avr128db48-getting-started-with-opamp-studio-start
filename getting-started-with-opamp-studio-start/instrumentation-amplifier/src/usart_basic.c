@@ -3,7 +3,7 @@
  *
  * \brief USART basic driver.
  *
- (c) 2018 Microchip Technology Inc. and its subsidiaries.
+ (c) 2020 Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms,you may use this software and
     any derivatives exclusively with Microchip products.It is your responsibility
@@ -219,17 +219,17 @@ int8_t USART_0_init()
 
 	USART3.BAUD = (uint16_t)USART3_BAUD_RATE(115200); /* set baud rate register */
 
-	USART3.CTRLA = 0 << USART_ABEIE_bp    /* Auto-baud Error Interrupt Enable: disabled */
-	               | 0 << USART_DREIE_bp  /* Data Register Empty Interrupt Enable: disabled */
-	               | 0 << USART_LBME_bp   /* Loop-back Mode Enable: disabled */
-	               | USART_RS485_DISABLE_gc   /* RS485 Mode disabled */
-	               | 1 << USART_RXCIE_bp  /* Receive Complete Interrupt Enable: enabled */
-	               | 0 << USART_RXSIE_bp  /* Receiver Start Frame Interrupt Enable: disabled */
-	               | 0 << USART_TXCIE_bp; /* Transmit Complete Interrupt Enable: disabled */
+	USART3.CTRLA = 0 << USART_ABEIE_bp      /* Auto-baud Error Interrupt Enable: disabled */
+	               | 0 << USART_DREIE_bp    /* Data Register Empty Interrupt Enable: disabled */
+	               | 0 << USART_LBME_bp     /* Loop-back Mode Enable: disabled */
+	               | USART_RS485_DISABLE_gc /* RS485 Mode disabled */
+	               | 1 << USART_RXCIE_bp    /* Receive Complete Interrupt Enable: enabled */
+	               | 0 << USART_RXSIE_bp    /* Receiver Start Frame Interrupt Enable: disabled */
+	               | 0 << USART_TXCIE_bp;   /* Transmit Complete Interrupt Enable: disabled */
 
 	USART3.CTRLB = 0 << USART_MPCM_bp       /* Multi-processor Communication Mode: disabled */
 	               | 0 << USART_ODME_bp     /* Open Drain Mode Enable: disabled */
-	               | 1 << USART_RXEN_bp     /* Reciever enable: enabled */
+	               | 1 << USART_RXEN_bp     /* Receiver Enable: enabled */
 	               | USART_RXMODE_NORMAL_gc /* Normal mode */
 	               | 0 << USART_SFDEN_bp    /* Start Frame Detection Enable: disabled */
 	               | 1 << USART_TXEN_bp;    /* Transmitter Enable: enabled */

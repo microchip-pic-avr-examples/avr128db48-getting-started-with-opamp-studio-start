@@ -39,7 +39,7 @@
  *
  * \acme_license_stop
  *
- * Project: Differential_Amplifier
+ * Project: differential-amplifier
  * Target:  AVR128DB48 
  *
  **/

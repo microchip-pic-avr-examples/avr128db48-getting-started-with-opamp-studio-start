@@ -23,7 +23,7 @@
   <conditions>
     <condition id="AVR Device Startup">
       <description>Dependency on Device Startup components</description>
-      <require Cclass="Device" Cgroup="Startup" Cversion="1.3.0"/>
+      <require Cclass="Device" Cgroup="Startup" Cversion="1.4.0"/>
     </condition>
     <condition id="ARMCC, GCC, IAR">
       <require Dname="AVR128DB48"/>

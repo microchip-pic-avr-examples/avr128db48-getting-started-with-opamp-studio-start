@@ -3,7 +3,7 @@
  *
  * \brief TCB related functionality implementation.
  *
- (c) 2018 Microchip Technology Inc. and its subsidiaries.
+ (c) 2020 Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms,you may use this software and
     any derivatives exclusively with Microchip products.It is your responsibility
@@ -61,7 +61,7 @@ int8_t SINE_WAVE_TIMER_init()
 	TCB0.INTCTRL = 1 << TCB_CAPT_bp   /* Capture or Timeout: enabled */
 	               | 0 << TCB_OVF_bp; /* OverFlow Interrupt: disabled */
 
-	// TCB0.CTRLA = TCB_CLKSEL_DIV1_gc /* CLK_PEP */
+	// TCB0.CTRLA = TCB_CLKSEL_DIV1_gc /* CLK_PER */
 	//		 | 0 << TCB_ENABLE_bp /* Enable: disabled */
 	//		 | 0 << TCB_RUNSTDBY_bp /* Run Standby: disabled */
 	//		 | 0 << TCB_SYNCUPD_bp /* Synchronize Update: disabled */
@@ -96,7 +96,7 @@ int8_t ADC_SAMPLE_TIMER_init()
 	TCB1.INTCTRL = 1 << TCB_CAPT_bp   /* Capture or Timeout: enabled */
 	               | 0 << TCB_OVF_bp; /* OverFlow Interrupt: disabled */
 
-	// TCB1.CTRLA = TCB_CLKSEL_DIV1_gc /* CLK_PEP */
+	// TCB1.CTRLA = TCB_CLKSEL_DIV1_gc /* CLK_PER */
 	//		 | 0 << TCB_ENABLE_bp /* Enable: disabled */
 	//		 | 0 << TCB_RUNSTDBY_bp /* Run Standby: disabled */
 	//		 | 0 << TCB_SYNCUPD_bp /* Synchronize Update: disabled */
