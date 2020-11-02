@@ -3,7 +3,7 @@
  *
  * \brief ADC Basic driver implementation.
  *
- (c) 2018 Microchip Technology Inc. and its subsidiaries.
+ (c) 2020 Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms,you may use this software and
     any derivatives exclusively with Microchip products.It is your responsibility
@@ -39,6 +39,7 @@
 /** Function pointer to callback function called by IRQ.
     NULL=default value: No callback function is to be used.
 */
+
 adc_irq_cb_t ADC_0_cb = NULL; /**
                                * \brief Initialize ADC interface
                                * If module is configured to disabled state, the clock to the ADC is disabled

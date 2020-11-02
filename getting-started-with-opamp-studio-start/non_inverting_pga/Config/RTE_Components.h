@@ -39,7 +39,7 @@
  *
  * \acme_license_stop
  *
- * Project: Non_Inverting_PGA
+ * Project: non-inverting-pga
  * Target:  AVR128DB48 
  *
  **/

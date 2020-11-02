@@ -3,7 +3,7 @@
  *
  * \brief OPAMP related functionality implementation.
  *
- (c) 2018 Microchip Technology Inc. and its subsidiaries.
+ (c) 2020 Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms,you may use this software and
     any derivatives exclusively with Microchip products.It is your responsibility
@@ -26,7 +26,7 @@
  */
 
 /**
- * \defgroup doc_driver_opamp_init opamp Init Driver
+ * \defgroup doc_driver_opamp_basic opamp Basic Driver
  * \ingroup doc_driver_opamp
  *
  * \section doc_driver_opamp_rev Revision History

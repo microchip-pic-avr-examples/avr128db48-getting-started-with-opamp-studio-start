@@ -3,7 +3,7 @@
  *
  * \brief Driver initialization.
  *
- (c) 2018 Microchip Technology Inc. and its subsidiaries.
+ (c) 2020 Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms,you may use this software and
     any derivatives exclusively with Microchip products.It is your responsibility
@@ -68,7 +68,6 @@ void USART_0_initialization(void)
 	    PORT_PULL_OFF);
 
 	// Set pin direction to output
-	PB0_set_dir(PORT_DIR_OUT);
 
 	PB0_set_level(
 	    // <y> Initial level
@@ -76,6 +75,8 @@ void USART_0_initialization(void)
 	    // <false"> Low
 	    // <true"> High
 	    false);
+
+	PB0_set_dir(PORT_DIR_OUT);
 
 	USART_0_init();
 }
@@ -126,7 +127,6 @@ void system_init()
 	/* PORT setting on PB3 */
 
 	// Set pin direction to output
-	LED0_set_dir(PORT_DIR_OUT);
 
 	LED0_set_level(
 	    // <y> Initial level
@@ -134,6 +134,8 @@ void system_init()
 	    // <false"> Low
 	    // <true"> High
 	    false);
+
+	LED0_set_dir(PORT_DIR_OUT);
 
 	OPERATIONAL_AMPLIFIER_0_initialization();
 

@@ -39,7 +39,7 @@
  *
  * \acme_license_stop
  *
- * Project: Voltage_Follower
+ * Project: voltage-follower
  * Target:  AVR128DB48 
  *
  **/

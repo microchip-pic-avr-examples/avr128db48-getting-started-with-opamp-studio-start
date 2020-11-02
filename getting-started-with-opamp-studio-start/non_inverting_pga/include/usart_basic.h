@@ -3,7 +3,7 @@
  *
  * \brief USART basic driver.
  *
- (c) 2018 Microchip Technology Inc. and its subsidiaries.
+ (c) 2020 Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms,you may use this software and
     any derivatives exclusively with Microchip products.It is your responsibility
@@ -36,7 +36,7 @@ extern "C" {
 #endif
 
 /* Normal Mode, Baud register value */
-#define USART3_BAUD_RATE(BAUD_RATE) ((float)(24000000.0 * 64 / (16 * (float)BAUD_RATE)) + 0.5)
+#define USART3_BAUD_RATE(BAUD_RATE) ((float)(24000000 * 64 / (16 * (float)BAUD_RATE)) + 0.5)
 
 /* USART_0 Ringbuffer */
 
