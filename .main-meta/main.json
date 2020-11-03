@@ -3,11 +3,11 @@
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.1.0",
-        "name": "com.microchip.mcu8.studio.project.avr128db48-getting-started-with-opamp-studio",
+        "name": "com.microchip.mcu8.studio.project.avr128db48-getting-started-with-opamp-studio-start",
         "version": "1.0.0",
         "displayName": "Getting Started with Analog Signal Conditioning (OPAMP)",
-        "projectName": "avr128db48-getting-started-with-opamp-studio",
-        "shortDescription": "These Atmel Studio 7 START examples in **Getting Started with Analog Signal Conditioning (OPAMP) (TB3286), show how the OPAMP can be used on the AVR DB family of microcontrollers. The OPAMP peripheral features up to three internal operational amplifiers.",
+        "projectName": "avr128db48-getting-started-with-opamp-studio-start",
+        "shortDescription": "These Atmel Studio 7 START examples in Getting Started with Analog Signal Conditioning (OPAMP) (TB3286), show how the OPAMP can be used on the AVR DB family of microcontrollers. The OPAMP peripheral features up to three internal operational amplifiers.",
         "ide": {
             "name": "Studio",
             "semverRange": ">=7.0.2397"
@@ -20,11 +20,11 @@
         ],
         "dfp": {
             "name": "AVR-Dx_DFP",
-            "semverRange": ">=1.3.67"
+            "semverRange": "^=1.3.67"
         },
         "configurator": {
             "name": "START",
-            "semverRange": "^v1.1.14"
+            "semverRange": "^v1.8.457"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -36,7 +36,7 @@
                 "versionRange": "*"
             }
         },
-        "author": "Microchip",
+        "author": ["Microchip", "Martin Mostad"],
         "subcategories": [
             [
                "Peripherals", "OPAMP"
