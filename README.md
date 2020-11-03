@@ -51,6 +51,6 @@ All examples can be completed using the AVR128DB48 Curiosity Nano without any ex
 * To reconfigure the project press *Reconfigure Atmel Start Project*
 
 
-## Summary
+## Conclusion
 
 After going through these examples you should have a better understanding of how to configure the the OPAMP peripheral to achieve different modes of operation.   
