@@ -4,17 +4,17 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.studio.project.avr128db48-getting-started-with-opamp-studio-start",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "displayName": "Getting Started with Analog Signal Conditioning (OPAMP)",
         "projectName": "avr128db48-getting-started-with-opamp-studio-start",
         "shortDescription": "These Atmel Studio 7 START examples in Getting Started with Analog Signal Conditioning (OPAMP) (TB3286), show how the OPAMP can be used on the AVR DB family of microcontrollers. The OPAMP peripheral features up to three internal operational amplifiers.",
         "ide": {
-            "name": "Studio",
+            "name": "STUDIO",
             "semverRange": ">=7.0.2397"
         },
         "compiler": [
             {
-                "name": "AVR-GCC",
+                "name": "AVR GCC",
                 "semverRange": "^5.4.0"
             }
         ],
@@ -39,33 +39,41 @@
         "author": "Martin Mostad",
         "subcategories": [
             [
-               "Peripherals", "OPAMP"
+                "Peripherals",
+                "OPAMP"
             ],
             [
-               "Peripherals", "ADC"
-            ],            			
-            [
-               "Peripherals", "DAC"
+                "Peripherals",
+                "ADC"
             ],
             [
-               "Development Kit", "AVR128DB48 Curiosity Nano"
+                "Peripherals",
+                "DAC"
             ],
             [
-                "Supporting Tools", "MPLAB Data Visualizer"
+                "Development Kit",
+                "AVR128DB48 Curiosity Nano"
             ],
             [
-                "Supporting Tools", "MPLAB Mindi"
+                "Supporting Tools",
+                "MPLAB Data Visualizer"
+            ],
+            [
+                "Supporting Tools",
+                "MPLAB Mindi"
             ]
         ],
         "peripherals": [
-            "OPAMP", "ADC", "DAC"
+            "OPAMP",
+            "ADC",
+            "DAC"
         ],
         "keywords": [
             "Analog Signal Conditioning",
             "Getting Started",
             "Digital-to-Analog Converter",
             "Resistor Ladder",
-			"Adjustable Gain",
+            "Adjustable Gain",
             "Programmable Gain",
             "Operational Amplifier",
             "Op Amp",
@@ -83,16 +91,16 @@
             "AVRDB",
             "getting-started-with-opamp"
         ],
-		"additionalData": {
-			"longDescription": {
-				"metaDataVersion": "1.0.0",
-				"category": "com.microchip.portal.fileRef",
-				"content": {
-					"metaDataVersion": "1.0.0",
-					"fileName": "./README.md",
-					"mimeType": "text/markdown"
-				}
-			}
-		}
-	}
+        "additionalData": {
+            "longDescription": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.portal.fileRef",
+                "content": {
+                    "metaDataVersion": "1.0.0",
+                    "fileName": "./README.md",
+                    "mimeType": "text/markdown"
+                }
+            }
+        }
+    }
 }
